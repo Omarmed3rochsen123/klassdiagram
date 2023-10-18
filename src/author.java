@@ -20,6 +20,9 @@ public class author {
         this.email = email;
     }
 
+    public void setGender(char gender) {
+        this.gender = gender;
+    }
 
     public String toString() {
         return "author{" +
