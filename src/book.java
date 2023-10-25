@@ -1,9 +1,11 @@
-public class write{
+public class book{
 
     private String title;
+    private String author;
 
-    public write(String title){
+    public book(String title, String author){
         this.title = title;
+        this.author = author;
 
     }
 
@@ -18,6 +20,7 @@ public class write{
     public String toString() {
         return "write{" +
                 "title='" + title + '\'' +
+                "author= "+ author +
                 '}';
     }
 }
