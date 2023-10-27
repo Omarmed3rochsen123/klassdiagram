@@ -7,14 +7,11 @@ public class Main {
     static char gender;
     public static void main(String[] args) {
 
-
-        int val = 9;
-
+        int val;
         String name;
         String mail;
         String genderInput;
         String title;
-        String author;
 
         Scanner keyboard = new Scanner(System.in);
         System.out.print("Skriv in ditt namn: ");
@@ -27,29 +24,33 @@ public class Main {
         genderInput = keyboard.nextLine();
         toChar(genderInput);
 
+
         author user1 = new author(name,mail,gender);
         System.out.println(user1);
 
 
         System.out.println("Vad vill du göra nu?");
-        while(val != 0){
-            System.out.println("Skriv 1 för att skriva en ny bok");
-            System.out.println("2 för att plugga programering");
-            System.out.println("0 för att avsluta");
+        System.out.println("Skriv 1 för att skriva en ny bok");
+        System.out.println("2 för att plugga programering");
+        System.out.println("0 för att avsluta");
+        System.out.print(": ");
+
+        val = keyboard.nextInt();
         switch (val){
 
             case 1 -> {
                 System.out.print("Vad ska boken heta: ");
+                keyboard.next();                                     //"tömma slangen"
                 title = keyboard.nextLine();
 
                 book ett = new book(title, user1.getName());
             }
-            case 0 -> {
+            case 0 -> 
                 System.out.println("Hejdå");
-            }
-        }
 
         }
+
+
 
 
         author hamood = new author("hamood", "hamood.habibi", 'M');
